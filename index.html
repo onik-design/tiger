@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100%;
+    width: 100%;
+    background-color: #FFFAE8;
+  }
+
+  .box{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    /* background-color: pink; */
+  }
+
+  .box .tiger {
+    margin-top: 243px;
+    margin-left: -243px;
+  }
+
+  .box .tiger .part {
+    position: absolute;
+    animation: rotating 3.5s cubic-bezier(.37,.15,.24,1) infinite;
+    /* background-color: skyblue; */
+  }
+
+  .box .tiger .tail {
+    animation-delay: 0.14s;
+  }
+
+  .box .tiger .body {
+    animation-delay: 0.1s;
+  }
+
+  @keyframes rotating {
+    from {
+      transform: rotate(720deg);
+    }
+
+    to {
+      transform: none;
+    }
+  }
+</style>
+<body>
+  <div class="box">
+    <div class="tiger">
+      <img class="head part" src="./head.png" style="z-index: 2;">
+      <img class="tail part" src="./tail.png" style="z-index: 3;">
+      <img class="body part" src="./body.png" style="z-index: 1;">
+    </div>
+  </div>
+
+</body>
+
+
+</html>
